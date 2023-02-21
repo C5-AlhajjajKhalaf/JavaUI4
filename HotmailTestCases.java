@@ -46,7 +46,9 @@ public class HotmailTestCases extends TestCase {
 		// verify that we are not on home page anymore
 		Assert.assertFalse(hp.isPresent());
 	}
-
+	public static void testLoginError() throws Exception {
+	
+	}
 	public void tearDown() throws Exception {
 		driver.quit();
 	}
