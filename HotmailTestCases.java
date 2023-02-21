@@ -47,7 +47,22 @@ public class HotmailTestCases extends TestCase {
 		Assert.assertFalse(hp.isPresent());
 	}
 	public static void testLoginError() throws Exception {
-	
+		LoginPage lp = new LoginPage(driver);
+		HomePage hp = new HomePage(driver);
+
+		lp.open();
+		lp.login(USERNAME, PASSWORD, true);
+
+		hp.waitForPage();
+		// verify that home page is visible
+		Assert.assertTrue(hp.isPresent());
+
+		// open login page second time
+		lp.open();
+
+		// verify that we are not on home page anymore
+		hp.waitForPage();
+		Assert.assertTrue(hp.isPresent());
 	}
 	public void tearDown() throws Exception {
 		driver.quit();
