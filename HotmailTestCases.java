@@ -31,7 +31,12 @@ public class HotmailTestCases extends TestCase {
 		driver = new RemoteWebDriver(new URL(SELENIUM_RC_URL), capabillities);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
+	public static void testLogin() throws Exception {
+		LoginPage lp = new LoginPage(driver);
+		HomePage hp = new HomePage(driver);
 
+		
+	}
 
 	public void tearDown() throws Exception {
 		driver.quit();
