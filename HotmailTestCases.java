@@ -64,6 +64,9 @@ public class HotmailTestCases extends TestCase {
 		hp.waitForPage();
 		Assert.assertTrue(hp.isPresent());
 	}
+	public static void Register() throws Exception {
+
+	}
 	public void tearDown() throws Exception {
 		driver.quit();
 	}
