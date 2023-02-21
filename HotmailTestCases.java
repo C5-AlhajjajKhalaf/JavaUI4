@@ -64,7 +64,7 @@ public class HotmailTestCases extends TestCase {
 		hp.waitForPage();
 		Assert.assertTrue(hp.isPresent());
 	}
-	public static void Register() throws Exception {
+	public static void RegisterEmail() throws Exception {
 		LoginPage lp = new LoginPage(driver);
 		ResetPasswordPage rpp = new ResetPasswordPage(driver);
 
@@ -76,6 +76,9 @@ public class HotmailTestCases extends TestCase {
 		rpp.clickNext();
 		boolean res = rpp.selectEmailMeResetLink();
 		Assert.assertTrue(res);
+	}
+	public static void RegisterPassword() throws Exception {
+		
 	}
 
 	public void tearDown() throws Exception {
